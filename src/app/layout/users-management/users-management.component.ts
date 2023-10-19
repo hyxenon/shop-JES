@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./users-management.component.scss']
 })
 export class UsersManagementComponent {
+  
 
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  
 }
