@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LatestCostumerComponent } from './latest-costumer/latest-costumer.component';
+import { CardsComponent } from './cards/cards.component';
 
 
 
 @NgModule({
   declarations: [
-    LatestCostumerComponent
+    LatestCostumerComponent,
+    CardsComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    LatestCostumerComponent
+    LatestCostumerComponent,
+    CardsComponent
   ]
 })
 export class ComponentsModule { }
