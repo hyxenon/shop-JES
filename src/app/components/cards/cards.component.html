@@ -1,1 +1,7 @@
-<p>cards works!</p>
+<div class="bg-green-300 w-[250px] h-[150px] flex justify-center items-center gap-6 rounded shadow-md border border-gray-300 cursor-pointer transition-all hover:bg-green-200">
+    <i class="bi bi-basket-fill text-4xl"></i>
+    <div>
+        <h1 class="text-center text-xl font-bold">{{ value }} <span *ngIf="isPeso === true">Pesos</span></h1>
+        <h1 class="text-xl">{{ title }}</h1>
+    </div>
+</div>

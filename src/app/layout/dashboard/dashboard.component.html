@@ -1,1 +1,47 @@
-<p>dashboard works!</p>
+<div class="bg-gray-100 dark:bg-gray-800">
+    <div class="flex gap-4  justify-center py-8">
+        <div class="flex gap-4">
+            <app-cards *ngFor="let item of dashboardCard" [title]="item.title" [value]="+item.value" [isPeso]="item.isPeso || false"></app-cards>
+        </div>
+    </div>
+    
+    <!-- Charts -->
+    <div class="mt-8">
+        <div class="flex justify-center gap-16">
+            <!-- Sales by Months -->
+        <div class="w-[40%] flex flex-col justify-center items-center border border-gray-300 p-4 shadow-lg rounded-md dark:bg-white  ">
+            <h1 class="font-bold">Monthly Sales Chart</h1>
+            <canvas width="" baseChart [data]="salesByMonth" type="bar">
+    
+            </canvas>        
+        </div>
+        <!-- Sales by Week -->
+        <div class="w-[40%] flex flex-col justify-center items-center border border-gray-300 p-4 shadow-lg rounded-md dark:bg-white">
+            <h1 class="font-bold">Daily Sales Chart</h1>
+            <canvas baseChart [data]="salesPerWeekData" type="bar">
+    
+            </canvas>  
+        </div>
+        </div>
+    
+         <div class="flex justify-center gap-16 mt-16 ">
+             <!-- Sales by Category -->
+         <div class="w-[40%]  flex flex-col justify-center items-center border border-gray-300 p-4 shadow-lg rounded-md dark:bg-white">
+            <h1 class="font-bold">Total Percentage Sales by Category</h1>
+            <canvas baseChart [data]="salesByCategory" type="bar"></canvas>
+        </div>
+        <!-- Profit -->
+        <div class="w-[40%] flex flex-col justify-center items-center border border-gray-300 p-4 shadow-lg rounded-md dark:bg-white">
+            <h1 class="font-bold">Total Sales By Category</h1>
+            <canvas baseChart [data]="salesByCategoryLine" type="line"></canvas>
+        </div>
+         </div>
+    </div>
+    
+    <!-- View Latest Costumer -->
+    <div class="mt-16">
+        <app-latest-costumer></app-latest-costumer>
+    </div>
+    
+</div>
+

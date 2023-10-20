@@ -1,1 +1,66 @@
-<p>users-management works!</p>
+<div class="w-full flex h-full min-h-[83vh] bg-gray-100 dark:bg-gray-800">
+  <!--  -->
+  <div class="h-full w-[300px] p-8 dark:gray-700  dark:bg-gray-800">
+      <div class="p-4 flex gap-4">
+          <!-- Logo -->
+          <div class="w-[30%]">
+              <img class="rounded-full cursor-pointer" src="../../../assets/profile pic.jpg" alt="">
+          </div>
+          <!-- username -->
+          <div class="flex flex-col justify-center">
+              <h1 class="font-bold dark:text-white">justinesantos</h1>
+              <div class="flex gap-1">
+                  <i class="bi bi-pencil-fill"></i>
+                  <p class="cursor-pointer dark:text-white">Edit Profile</p>
+              </div>
+          </div>
+      </div>
+      <!-- Links -->
+      <div class="w-full bg-gray-300 h-[1px] "></div>
+      <div class="flex-1 py-4 flex flex-col mt-2">
+          <!-- My Account Link -->
+          <div class="flex flex-col">
+              <div class="flex items-center gap-3">
+                  <i class="bi bi-person text-2xl"></i>
+                  <h1 routerLink="profile"  class="font-bold cursor-pointer hover:text-gray-400 transition-all dark:text-white dark:hover:text-blue-500">My Account</h1>
+              </div>
+              <div class="flex flex-col pl-9 mt-2 gap-1">
+                  <p routerLink="profile" routerLinkActive="link-active" class="cursor-pointer hover:text-gray-400 transition-all dark:text-gray-300 dark:hover:text-blue-500" >Profile</p>
+                  <p routerLink="bank-cards" routerLinkActive="link-active" class="cursor-pointer hover:text-gray-400 transition-all dark:text-gray-300 dark:hover:text-blue-500">Banks & Cards</p>
+                  <p routerLink="address" routerLinkActive="link-active" class="cursor-pointer hover:text-gray-400 transition-all dark:text-gray-300 dark:hover:text-blue-500">Addresses</p>
+                  <p routerLink="change-password" routerLinkActive="link-active" class="cursor-pointer hover:text-gray-400 transition-all dark:text-gray-300 dark:hover:text-blue-500">Change Password</p>
+              </div>
+          </div>
+
+          <!-- Puchase or Sell -->
+          <div class="flex flex-col mt-2">
+              <div class="flex items-center gap-3">
+                  <i class="bi bi-clipboard2 text-2xl"></i>
+                  <h1 routerLink="purchase-sell" routerLinkActive="link-active" class="font-bold cursor-pointer hover:text-gray-400 transition-all dark:text-white dark:hover:text-blue-500">My Purchase/Sell</h1>
+              </div>
+              <div>
+                  
+              </div>
+          </div>
+          <!-- Notification -->
+          <div class="flex flex-col mt-2">
+              <div class="flex items-center gap-3">
+                  <i class="bi bi-bell text-2xl"></i>
+                  <h1 routerLink="notification" routerLinkActive="link-active" class="font-bold cursor-pointer hover:text-gray-400 transition-all dark:text-white dark:hover:text-blue-500">Notification</h1>
+              </div>
+              <div>
+                  
+              </div>
+          </div>
+      </div>
+      
+  </div>
+
+  <!--  -->
+  <div class="flex-1 flex justify-center p-4 dark:bg-gray-800 dark:border-gray-700">
+      <div class="bg-white border border-gray-300 shadow-xl w-[80%] h-[80%] rounded-md p-4 flex flex-col dark:bg-gray-800 dark:border-gray-700">
+          <router-outlet></router-outlet>
+      </div>
+      
+  </div>
+</div>

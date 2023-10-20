@@ -1,0 +1,13 @@
+<div class="flex flex-col mt-8 border border-gray-400 p-8 bg-white shadow-xl rounded-lg dark:bg-gray-800 dark:border-gray-700">
+    <h1 class="uppercase text-gray-700 dark:text-gray-50">Categories</h1>
+    <hr class="mt-4">
+
+    <div class="flex flex-wrap gap-4 mt-4 py-2 px-8">
+        <div *ngFor="let category of categories" class="py-2 px-4 cursor-pointer border-b border-gray-300 shadow-lg link-color text-white transition-all bg-gray-800 hover:bg-gray-950 dark:bg-blue-700 dark:border-gray-700 dark:hover:bg-blue-800" (click)="onCategoryClick(category.categoryName)">
+            <div class="">
+                <h1 class="text-white dark:text-gray-100">{{ category.categoryName }}</h1>
+            </div>
+        </div>
+    </div>
+    
+</div>
